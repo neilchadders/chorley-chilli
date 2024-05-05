@@ -1,7 +1,7 @@
-import express from 'express';
-import dotenv from 'dotenv';
+import express from 'express'; 
+import dotenv from 'dotenv'; 
 dotenv.config();
-import connectDB from './config.js/db.js';
+import connectDB from './config/db.js';
 import products from './data/product.js';
 
 
@@ -11,11 +11,11 @@ const port = process.env.PORT || 5000;
 
 const app = express();
 
-app.get('/', (req, res) => {
+app.get('/', (req, res) => { // create a route
     res.send('Api is running...!');
 });
 
-app.get('/api/products', (req, res) => {
+app.get('/api/products', (req, res) => { 
     res.json(products);
 });
 

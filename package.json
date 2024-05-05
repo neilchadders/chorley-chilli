@@ -8,11 +8,16 @@
         "start": "node back-end/server.js",
         "server": "nodemon back-end/server.js",
         "client": "npm start --prefix front-end",
-        "dev": "concurrently \"npm run server\" \"npm run client\""
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "data:import": "node back-end/seeder.js",
+        "data:destroy": "node backend/seeder.js -d",
+        "build": "npm install && npm install --prefix front-end && npm run build --prefix front-end"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "colors": "^1.4.0",
         "dotenv": "^16.4.5",
         "express": "^4.19.2",
         "mongoose": "^8.3.3"
