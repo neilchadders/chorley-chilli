@@ -7,7 +7,6 @@ const baseQuery = fetchBaseQuery({ // fetchBaseQuery is a function that returns 
 
 
 
-
 export const apiSlice = createApi({ // createApi is a function that returns an API object
   baseQuery,
   tagTypes: ['Product', 'Order', 'User'],
