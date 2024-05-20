@@ -5,22 +5,22 @@ import Product from '../models/productModel.js';
 // @route   GET /api/products
 // @access  Public
 const getProducts = asyncHandler(async (req, res) => {
-  const pageSize = process.env.PAGINATION_LIMIT;
-  const page = Number(req.query.pageNumber) || 1;
+  const pageSize = process.env.PAGINATION_LIMIT; // NOTE: 10 by default
+  const page = Number(req.query.pageNumber) || 1; 
 
   const keyword = req.query.keyword
     ? {
         name: {
-          $regex: req.query.keyword,
-          $options: 'i',
+          $regex: req.query.keyword, // NOTE: $regex is a MongoDB operator
+          $options: 'i', // NOTE: $options: 'i' makes the search case-insensitive
         },
       }
     : {};
 
-  const count = await Product.countDocuments({ ...keyword });
+  const count = await Product.countDocuments({ ...keyword }); // used to count the number of documents that match the filter in a database collection. Products in this case
   const products = await Product.find({ ...keyword })
-    .limit(pageSize)
-    .skip(pageSize * (page - 1));
+    .limit(pageSize) // NOTE: limit() is a MongoDB method that limits the number of documents returned in a query
+    .skip(pageSize * (page - 1)); // NOTE: skip() is a MongoDB method that skips a specified number of documents in a query
 
   res.json({ products, page, pages: Math.ceil(count / pageSize) });
 });
