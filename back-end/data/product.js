@@ -1,10 +1,10 @@
 // REMEMBER NO ID NEEDED AS CREATED BY MONGO
 
 
-const products = [
+const products = [ 
   {
           name: 'Airpods Wireless Bluetooth Headphones', 
-    image: '/images/airpods.jpg',
+    image: '/images/green.chilli.png',
     description:
       'Bluetooth technology lets you connect it with compatible devices wirelessly High-quality AAC audio offers immersive listening experience Built-in microphone allows you to take calls while working',
     brand: 'Apple',
@@ -76,6 +76,20 @@ const products = [
     category: 'Electronics',
     price: 29.99,
     countInStock: 0,
+    rating: 4,
+    numReviews: 12,
+  }, 
+
+  {
+    
+    name: 'The Scotch / HOT Chilli Sauce',
+    image: '/images/alexa.jpg',
+    description:
+      'Scotch Bonnet a.k.a. the pepper of Caribbean, named after Tom o’ Shanter’s hat. This hot sauce is tropical, sweet and fruity intense flavours, a real versatile chilli that work well in all styles of cooking or as a marinade especially around BBQ time',
+    brand: 'Amazon',
+    category: 'Chilli Sauce',
+    price: 8.99,
+    countInStock: 2,
     rating: 4,
     numReviews: 12,
   },

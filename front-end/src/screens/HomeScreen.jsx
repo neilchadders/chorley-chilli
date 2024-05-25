@@ -3,11 +3,15 @@ import { useParams } from 'react-router-dom';
 import { useGetProductsQuery } from '../slices/productsApiSlice';
 import { Link } from 'react-router-dom';
 import Product from '../components/Product';
+import Intro from '../components/Intro';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import Paginate from '../components/Paginate';
 import ProductCarousel from '../components/ProductCarousel';
 import Meta from '../components/Meta';
+
+
+
 
 const HomeScreen = () => {
   const { pageNumber, keyword } = useParams();
@@ -19,6 +23,7 @@ const HomeScreen = () => {
 
   return (
     <>
+      <Intro />
       {!keyword ? (
         <ProductCarousel />
       ) : (
