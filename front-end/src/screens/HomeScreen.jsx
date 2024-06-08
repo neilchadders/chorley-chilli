@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useGetProductsQuery } from '../slices/productsApiSlice';
 import { Link } from 'react-router-dom';
 import Product from '../components/Product';
-import Intro from '../components/Intro';
+//import Intro from '../components/Intro';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import Paginate from '../components/Paginate';
@@ -14,16 +14,16 @@ import Meta from '../components/Meta';
 
 
 const HomeScreen = () => {
-  const { pageNumber, keyword } = useParams();
+  const { pageNumber, keyword } = useParams(); // from router
 
-  const { data, isLoading, error } = useGetProductsQuery({
+  const { data, isLoading, error } = useGetProductsQuery({ //from productsApiSlice
     keyword,
     pageNumber,
   });
 
   return (
     <>
-      <Intro />
+
       {!keyword ? (
         <ProductCarousel />
       ) : (

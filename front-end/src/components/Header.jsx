@@ -41,6 +41,16 @@ const Header = () => {
               Chorley Chilli
             </Navbar.Brand>
           </LinkContainer>
+          <LinkContainer to='/shop'>
+                <Nav.Link> Shop 
+                </Nav.Link>
+              </LinkContainer>
+
+              <LinkContainer to='/about'>
+                <Nav.Link> About
+                </Nav.Link>
+              </LinkContainer>
+
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto'>

@@ -6,16 +6,16 @@ import Product from '../models/productModel.js';
 // @access  Public
 const getProducts = asyncHandler(async (req, res) => {
   const pageSize = process.env.PAGINATION_LIMIT; // NOTE: 10 by default
-  const page = Number(req.query.pageNumber) || 1; 
+  const page = Number(req.query.pageNumber) || 1; // req.query.pageNumber is a string from URL, so we convert it to a number
 
-  const keyword = req.query.keyword
+  const keyword = req.query.keyword // NOTE: req.query is an object containing a property for each query string parameter in the route. 
     ? {
         name: {
           $regex: req.query.keyword, // NOTE: $regex is a MongoDB operator
           $options: 'i', // NOTE: $options: 'i' makes the search case-insensitive
         },
       }
-    : {};
+    : {}; //This basically takes a keyword, and uses regex to match
 
   const count = await Product.countDocuments({ ...keyword }); // used to count the number of documents that match the filter in a database collection. Products in this case
   const products = await Product.find({ ...keyword })

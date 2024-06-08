@@ -5,11 +5,11 @@ import authSliceReducer from './slices/authSlice';
 
 const store = configureStore({
   reducer: {
-    [apiSlice.reducerPath]: apiSlice.reducer,
+    [apiSlice.reducerPath]: apiSlice.reducer, // add to configureStoreConst after creation
     cart: cartSliceReducer, // add to configureStoreConst after creation
     auth:authSliceReducer,
   },
-  middleware: (getDefaultMiddleware) =>
+  middleware: (getDefaultMiddleware) => // add to configureStoreConst after creation
     getDefaultMiddleware().concat(apiSlice.middleware),
   devTools: true,
 });
