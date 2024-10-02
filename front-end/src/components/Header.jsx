@@ -8,6 +8,8 @@ import { logout } from '../slices/authSlice';
 import SearchBox from './SearchBox';
 import { resetCart } from '../slices/cartSlice';
 
+import './header.css';
+
 const Header = () => {
   const { cartItems } = useSelector((state) => state.cart);
   const { userInfo } = useSelector((state) => state.auth);
@@ -31,8 +33,8 @@ const Header = () => {
   };
 
   return (
-    <header>
-      <Navbar bg='primary' variant='dark' expand='lg' collapseOnSelect>
+    <header className = "header">
+      <Navbar  variant='dark' expand='lg' collapseOnSelect> 
         <Container>
           <LinkContainer to='/'>
             <Navbar.Brand>
@@ -41,12 +43,12 @@ const Header = () => {
               Chorley Chilli
             </Navbar.Brand>
           </LinkContainer>
-          <LinkContainer to='/shop'>
+          <LinkContainer to='/shop' className='links'>
                 <Nav.Link> Shop 
                 </Nav.Link>
               </LinkContainer>
 
-              <LinkContainer to='/about'>
+              <LinkContainer to='/about' className='links'> 
                 <Nav.Link> About
                 </Nav.Link>
               </LinkContainer>

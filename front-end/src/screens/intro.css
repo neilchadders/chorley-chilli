@@ -1,4 +1,25 @@
-.intro{
-    background-color: blueviolet;
-    min-height: 100vh;
+.intro_img{
+    position: relative;
+    max-width: 50%;
+    text-align: center;
+    margin: auto;
+} 
+
+img{
+    position: relative;
+    max-width: 100%;
+    opacity: 0.3;
+    
+}
+.intro_text{
+  
+    color: black;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+.centre{
+    text-align: center;
+    background-color: yellow;
 }
