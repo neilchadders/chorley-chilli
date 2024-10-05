@@ -1,17 +1,6 @@
-.intro_img{
-    position: relative;
-    max-width: 50%;
-    text-align: center;
-    margin: auto;
-} 
 
-img{
-    position: relative;
-    max-width: 100%;
-    opacity: 0.3;
-    
-}
-.intro_text{
+
+.intro_text{    
   
     color: black;
     font-size: 50px;
@@ -21,5 +10,18 @@ img{
 
 .centre{
     text-align: center;
-    background-color: yellow;
+    
 }
+
+
+.carousel .carousel-item {
+    height: 500px;
+  }
+  
+  .carousel-item img {
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      min-height: 500px;
+  }
