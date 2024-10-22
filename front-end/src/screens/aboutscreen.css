@@ -1,0 +1,21 @@
+#about-main{
+
+    color: black;
+    background-color: yellow;
+    margin-top: 80px;
+    padding: 30px;
+    font-family: 'Courier New', Courier, monospace;
+   border: 2px red solid;
+   border-radius: 30px;
+   background: rgb(255, 255, 0, .9);
+
+
+}
+
+#about-main h1{
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}

@@ -3,16 +3,23 @@
 .intro_text{    
   
     color: black;
-    font-size: 50px;
+    font-size: 60px;
     font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
     
 }
 
 .centre{
-    text-align: center;
-    
+    text-align: center;   
+    background-color: yellow;
+    margin-top: 80px;
+    padding: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    border-top: black 2px solid;
+    border-bottom: black 2px solid;
+  
+   background: rgb(255, 255, 0, .9);
 }
-
 
 .carousel .carousel-item {
     height: 500px;
