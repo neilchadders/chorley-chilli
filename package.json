@@ -3,7 +3,7 @@
     "version": "2.0.0",
     "description": "\"eCommerce full stack\"",
     "type": "module",
-    "main": "index.js",
+    "main": "server.js",
     "scripts": {
         "start": "node back-end/server.js",
         "server": "nodemon back-end/server.js",
