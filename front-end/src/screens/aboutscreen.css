@@ -5,9 +5,9 @@
     margin-top: 80px;
     padding: 30px;
     font-family: 'Courier New', Courier, monospace;
-   border: 2px red solid;
+   border: 5px red solid;
    border-radius: 30px;
-   background: rgb(255, 255, 0, 0.5);
+   background: rgb(255, 255, 0, .9);
  
     
   }
@@ -21,10 +21,7 @@
 
 }
 
-p{
-    font-size: 90%;
-   
-}
+
 
 .about-content-div{
     display: flex;
@@ -34,8 +31,18 @@ p{
     margin-bottom: 50px;
 }
 
-.about-content{
+
+.about-content-text{
     flex-wrap: wrap;
       font-size: 90%;  
       max-width: 35%; 
+}
+
+@media screen and (max-width: 920px){
+    .about-content-text{
+        max-width: 100%;
+    }
+    .about-content-image{
+        max-width: 70%;
+    }
 }
