@@ -4,7 +4,7 @@
 const products = [ 
   {
           name: 'Burnt Pineapple & Scotch Bonnet Hot Sauce', 
-    image: 'images/Burnt_Pineapple_Hot_Sauce.png',
+    image: '/images/Burnt_Pineapple_Hot_Sauce.png',
     description:
       'Fruity and fresh. This sauce brings the tropical vibes. Tastes like: Fruity, spicy, fresh and juicy with subtle smoky notes from the charred pineapple. Goes with: Tacos, salsa and salads, grilled meats like chicken skewers and pizza.',
     brand: 'Sauce Shop',
