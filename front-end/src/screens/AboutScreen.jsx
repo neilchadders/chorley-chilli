@@ -3,7 +3,7 @@ import greenChilli from "./green.chilli.png";
 
 const AboutScreen = () => {
   return (
-    <div id="about-main" style = {{margin: 0}}>
+    <div id="about-main">
       <h1 id="intro-about">Welcome to J.F Bell's Hot Sauces</h1>
       <div className="about-content-div">
         <p className="about-content-text">
