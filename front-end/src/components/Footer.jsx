@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <Container>
+      <Container style={{color: "black", margin:0}}>
         <Row>
           <Col className='text-center py-3'>
             <p>Chorley-Chilli &copy; {currentYear}</p>
