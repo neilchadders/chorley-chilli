@@ -3,19 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
+    
  
 }
 
-html, body{
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-    min-height: 100vh;
-   
-}
-
-#root{
-    height: 100%;
-    width: 100%;
-    min-height: 100vh;
-}

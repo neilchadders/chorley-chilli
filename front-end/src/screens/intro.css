@@ -18,7 +18,7 @@
     border-top: black 2px solid;
     border-bottom: black 2px solid;
   
-   background: rgb(255, 255, 0, 0.4);
+   background: rgb(255, 255, 0, 0.9);
    
    
 }
@@ -36,4 +36,21 @@
   }
 
  
-  
+  @media screen and (max-width: 920px){
+    .intro_text{
+        font-size: 30px;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    .centre{
+        margin-top: 20px;
+        padding: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        border:solid red 1px;
+        border-radius: 30px;
+    }
+    .carousel .carousel-item {
+      height: 300px;
+    }
+  }
