@@ -7,8 +7,9 @@ const IntroScreen = () => {
      
         <div className='centre'>
             <div id = "title-text">
-            <p  className='intro_text'>J F Bell's</p>
-            <p className='intro_text'>Chorley Chilli Sauces</p>
+            <p className='title-head'>J. F. Bell</p> 
+            <p  className='intro-text'>Chorley Chilli Sauces</p>
+            <p className='intro-text'>Tasty Spices at Tasty Prices</p>
             </div>
                  
        

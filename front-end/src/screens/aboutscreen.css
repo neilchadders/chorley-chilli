@@ -5,12 +5,9 @@
     margin-top: 80px;
     padding: 30px;
     font-family: 'Courier New', Courier, monospace;
-   border: 5px red solid;
-   border-radius: 30px;
-   background: rgb(255, 255, 0, .9);
- 
- 
-    
+   border: 1px black solid;
+    background: rgb(255, 255, 0, .9);
+  
   }
 
 
@@ -30,6 +27,7 @@
     flex-wrap: wrap;
     margin-top: 50px;
     margin-bottom: 50px;
+    
 }
 
 
@@ -47,7 +45,7 @@
         padding: 20px;
         font-family: 'Courier New', Courier, monospace;
         border:none;
-       border:solid red 1px;
+        border:solid black 1px;
      
             
       }

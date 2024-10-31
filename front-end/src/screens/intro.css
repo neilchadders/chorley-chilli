@@ -1,22 +1,28 @@
 
 
-.intro_text{    
+#title-text{    
+  font-family: "Bungee Tint", sans-serif;
   
-  font-size: 50px;
-  font-weight: 900;
   text-align: center;
-  color: #000;
-    
+
+}
+.title-head{
+ font-size: 1.5em;
+
+}
+
+.intro-text{
+    font-size: .7em;
+
 }
 
 .centre{
-    text-align: center;   
+   
     background-color: yellow;
-    margin-top: 80px;
+    margin-top: 0px;
     padding: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    border-top: black 2px solid;
     border-bottom: black 2px solid;
+    border-top: black 2px solid;
   
    background: rgb(255, 255, 0, 0.9);
    
@@ -37,20 +43,20 @@
 
  
   @media screen and (max-width: 920px){
-    .intro_text{
-        font-size: 30px;
+    #title-text{
+        font-size: 2em;
         font-weight: 900;
-        text-align: center;
+    
     }
 
     .centre{
         margin-top: 20px;
-        padding: 20px;
-        font-family: 'Courier New', Courier, monospace;
-        border:solid red 1px;
-        border-radius: 30px;
+     
+        
+       
     }
-    .carousel .carousel-item {
-      height: 300px;
+    .carousel-item{
+      max-height: 400px;
+      border:solid black 1px;
     }
   }
