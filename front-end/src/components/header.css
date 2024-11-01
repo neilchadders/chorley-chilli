@@ -3,9 +3,16 @@
 
 .header {
     font-family: 'Courier New', Courier, monospace;
-    background-color: black;
+   color: black;
 }
 
+.brand{
+    color: black;
+    font-family: 'Bungee Tint', sans-serif;
+}
+.navbar-toggler {
+color: black;
+}
 .links {
-    padding-left: 5%;
+margin-left: 10px;
 }

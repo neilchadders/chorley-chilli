@@ -34,13 +34,11 @@ const Header = () => {
 
   return (
     <header className = "header">
-      <Navbar  variant='dark' expand='lg' collapseOnSelect> 
+      <Navbar variant='light' expand='lg' collapseOnSelect> 
         <Container>
           <LinkContainer to='/'>
-            <Navbar.Brand>
-              J F Bell's<br>
-              </br>              
-              Chorley Chilli
+            <Navbar.Brand className='brand'>
+              J F Bell
             </Navbar.Brand>
           </LinkContainer>
           <LinkContainer to='/shop' className='links'>
