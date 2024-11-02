@@ -38,7 +38,7 @@ const Header = () => {
         <Container>
           <LinkContainer to='/'>
             <Navbar.Brand className='brand'>
-              J F Bell
+              J. F. Bell
             </Navbar.Brand>
           </LinkContainer>
           <LinkContainer to='/shop' className='links'>

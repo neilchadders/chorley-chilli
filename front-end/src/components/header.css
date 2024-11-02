@@ -12,6 +12,13 @@
 }
 .navbar-toggler {
 color: black;
+margin-bottom:15px ;
+}
+
+.nav-link{
+    color: black;
+    background: rgb(255, 255, 0, .8);
+  
 }
 .links {
 margin-left: 10px;

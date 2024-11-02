@@ -80,7 +80,7 @@ const products = [
   {
     
     name: 'The Scotch / HOT Chilli Sauce',
-    image: 'images/green.chilli.png',
+    image: '/images/green.chilli.png',
     description:
       "Scotch Bonnet a.k.a. the pepper of Caribbean, named after Tom o’ Shanter’s hat. This hot sauce is tropical, sweet and fruity intense flavours, a real versatile chilli that work well in all styles of cooking or as a marinade especially around BBQ time",
     brand: 'Amazon',

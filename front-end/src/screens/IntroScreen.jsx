@@ -1,6 +1,6 @@
 
 import './intro.css'
-import ProductCarousel from '../components/ProductCarousel';
+import ProductCarousel from '../components/ProductCarousel'; // Import the ProductCarousel component
 
 const IntroScreen = () => {
     return (
@@ -14,7 +14,7 @@ const IntroScreen = () => {
                  
        
         <div className='intro_text_carousel'>
-             <ProductCarousel/>
+             <ProductCarousel/> 
         </div>
        
         </div>
@@ -22,4 +22,4 @@ const IntroScreen = () => {
     );
 }
 
-export default IntroScreen;
+export default IntroScreen; 
