@@ -38,7 +38,10 @@
       left: 0;
       min-height: 500px;
   }
-
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    
+    background-color: black;
+}
  
   @media screen and (max-width: 920px){
     #title-text{
