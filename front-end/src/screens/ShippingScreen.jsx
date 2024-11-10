@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import FormContainer from '../components/FormContainer';
 import CheckoutSteps from '../components/CheckoutSteps';
 import { saveShippingAddress } from '../slices/cartSlice';
+import './screen.background.css';
 
-import './global.background.css';
 
 const ShippingScreen = () => {
   const cart = useSelector((state) => state.cart);

@@ -9,8 +9,8 @@ import { useRegisterMutation } from '../slices/usersApiSlice';
 import { setCredentials } from '../slices/authSlice';
 import { toast } from 'react-toastify';
 
-import './register.css';
-import './global.background.css';
+import './screen.background.css';
+
 
 const RegisterScreen = () => {
   const [name, setName] = useState('');
