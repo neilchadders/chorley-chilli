@@ -5,7 +5,7 @@ import './screen.background.css';
 
 const AboutScreen = () => {
   return (
-    <div className = "screen-background"> 
+    <div id = "about-main"> 
       <h1 id="intro-about">Welcome to J.F Bell's Hot Sauces</h1>
       <div className="about-content-div">
         <p className="about-content-text">
