@@ -9,6 +9,7 @@ import Message from '../components/Message';
 import Paginate from '../components/Paginate';
 import Meta from '../components/Meta';
 
+import './screen.background.css';
 
 
 
@@ -30,7 +31,7 @@ const HomeScreen = () => {
         </Message>
       ) : (
         <>
-          <Meta id = "homescreen" />
+          <Meta id = "homescreen" className = "screen-background"/>
           <h1>Latest Products</h1>
           <Row>
             {data.products.map((product) => (
