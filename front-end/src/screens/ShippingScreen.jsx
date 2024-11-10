@@ -6,6 +6,8 @@ import FormContainer from '../components/FormContainer';
 import CheckoutSteps from '../components/CheckoutSteps';
 import { saveShippingAddress } from '../slices/cartSlice';
 
+import './global.background.css';
+
 const ShippingScreen = () => {
   const cart = useSelector((state) => state.cart);
   const { shippingAddress } = cart;

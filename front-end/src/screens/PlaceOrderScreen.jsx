@@ -9,6 +9,8 @@ import Loader from '../components/Loader';
 import { useCreateOrderMutation } from '../slices/ordersApiSlice';
 import { clearCartItems } from '../slices/cartSlice';
 
+import './global.background.css';
+
 const PlaceOrderScreen = () => {
   const navigate = useNavigate();
 

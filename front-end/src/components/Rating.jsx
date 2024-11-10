@@ -1,8 +1,9 @@
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
+import './global.background.css';
 
 const Rating = ({ value, text, color }) => {
   return (
-    <div className='rating'>
+    <div className='rating background-class'>
       <span>
         {value >= 1 ? (
           <FaStar />

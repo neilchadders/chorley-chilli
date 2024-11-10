@@ -13,6 +13,8 @@ import { FaTrash } from 'react-icons/fa';
 import Message from '../components/Message';
 import { addToCart, removeFromCart } from '../slices/cartSlice';
 
+import './global.background.css';
+
 const CartScreen = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
