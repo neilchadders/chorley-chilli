@@ -2,7 +2,7 @@
 import './intro.css'
 import './screen.background.css'
 import ProductCarousel from '../components/ProductCarousel'; // Import the ProductCarousel component
-import './global.background.css';
+
 const IntroScreen = () => {
     return (
      
