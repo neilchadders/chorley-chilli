@@ -22,6 +22,8 @@ import Message from '../components/Message';
 import Meta from '../components/Meta';
 import { addToCart } from '../slices/cartSlice';
 
+import './screen.background.css';
+
 const ProductScreen = () => {
   const { id: productId } = useParams();
 
@@ -79,7 +81,7 @@ const ProductScreen = () => {
       ) : (
         <>
           <Meta title={product.name} description={product.description} />
-          <Row className = "background-class">
+          <Row className = "screen-background">
             <Col md={6}>
               <Image src={product.image} alt={product.name} fluid />
             </Col>

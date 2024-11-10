@@ -10,6 +10,7 @@ import Loader from '../components/Loader';
 import { useProfileMutation } from '../slices/usersApiSlice';
 import { useGetMyOrdersQuery } from '../slices/ordersApiSlice';
 import { setCredentials } from '../slices/authSlice';
+import './screen.background.css';
 
 const ProfileScreen = () => {
   const [name, setName] = useState('');
@@ -53,7 +54,7 @@ const ProfileScreen = () => {
   };
 
   return (
-    <Row className = "background-class">
+    <Row className = "screen-background">
       <Col md={3}>
         <h2>User Profile</h2>
 

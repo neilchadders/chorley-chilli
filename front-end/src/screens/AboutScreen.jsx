@@ -1,10 +1,11 @@
 import "./aboutscreen.css";
+import './screen.background.css';
 import greenChilli from "./green.chilli.png";
 import './global.background.css';
 
 const AboutScreen = () => {
   return (
-    <div className = "background-class"> 
+    <div className = "screen-background"> 
       <h1 id="intro-about">Welcome to J.F Bell's Hot Sauces</h1>
       <div className="about-content-div">
         <p className="about-content-text">

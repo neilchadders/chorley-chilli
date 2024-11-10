@@ -13,6 +13,8 @@ import {
   usePayOrderMutation,
 } from '../slices/ordersApiSlice';
 
+import './screen.background.css';
+
 const OrderScreen = () => {
   const { id: orderId } = useParams();
 
@@ -116,7 +118,7 @@ const OrderScreen = () => {
   ) : (
     <>
       <h1>Order {order._id}</h1>
-      <Row>
+      <Row className = "screen-background">
         <Col md={8}>
           <ListGroup variant='flush'>
             <ListGroup.Item>

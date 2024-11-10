@@ -1,11 +1,12 @@
 
 import './intro.css'
+import './screen.background.css'
 import ProductCarousel from '../components/ProductCarousel'; // Import the ProductCarousel component
 import './global.background.css';
 const IntroScreen = () => {
     return (
      
-        <div className = "background-class">
+        <div className = "screen-background">
             <div id = "title-text">
             <p className='title-head'>J. F. Bell</p> 
             <p  className='intro-text'>Chorley Chilli Sauces</p>

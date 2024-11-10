@@ -9,7 +9,7 @@ import Loader from '../components/Loader';
 import { useCreateOrderMutation } from '../slices/ordersApiSlice';
 import { clearCartItems } from '../slices/cartSlice';
 
-import './global.background.css';
+import './screen.background.css';
 
 const PlaceOrderScreen = () => {
   const navigate = useNavigate();
@@ -48,7 +48,7 @@ const PlaceOrderScreen = () => {
   return (
     <>
       <CheckoutSteps step1 step2 step3 step4 />
-      <Row className = "background-class">
+      <Row className = "screen-background">
         <Col md={8}>
           <ListGroup variant='flush'>
             <ListGroup.Item>
