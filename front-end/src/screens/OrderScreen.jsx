@@ -66,8 +66,7 @@ const OrderScreen = () => {
   function onApprove(data, actions) { //from paypal doc
     return actions.order.capture().then(async function (details) { //details come from paypal
       try {
-        await payOrder({ orderId, details });
-        refetch();
+        await payOrder({ orderId, details }).unwrap(); //unwrap is used to get the actual data from the promise
         toast.success('Order is paid');
       } catch (err) {
         toast.error(err?.data?.message || err.error);
