@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import './formcontainer.css';
-
+import '../public/index.css'
 const FormContainer = ({ children }) => {
   return (
     <Container className = "background-class">
