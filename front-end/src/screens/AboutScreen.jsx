@@ -1,7 +1,7 @@
 import "./aboutscreen.css";
 import './screen.background.css';
 import greenChilli from "./green.chilli.png";
-import './global.background.css';
+import './screen.background.css';
 
 const AboutScreen = () => {
   return (

@@ -2,7 +2,7 @@ import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Rating from './Rating';
 import './formcontainer.css';
-import './global.background.css';
+
 
 const Product = ({ product }) => {
   return (
