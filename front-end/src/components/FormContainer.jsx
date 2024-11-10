@@ -3,7 +3,7 @@ import './formcontainer.css';
 
 const FormContainer = ({ children }) => {
   return (
-    <Container id = "form-container">
+    <Container className = "background-class">
       <Row className='justify-content-md-center'>
         <Col xs={12} md={6}>
           {children}

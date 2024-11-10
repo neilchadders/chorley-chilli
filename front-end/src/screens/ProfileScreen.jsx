@@ -53,7 +53,7 @@ const ProfileScreen = () => {
   };
 
   return (
-    <Row>
+    <Row className = "background-class">
       <Col md={3}>
         <h2>User Profile</h2>
 

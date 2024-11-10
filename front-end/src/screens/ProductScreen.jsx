@@ -79,7 +79,7 @@ const ProductScreen = () => {
       ) : (
         <>
           <Meta title={product.name} description={product.description} />
-          <Row>
+          <Row className = "background-class">
             <Col md={6}>
               <Image src={product.image} alt={product.name} fluid />
             </Col>

@@ -5,7 +5,7 @@ import ProductCarousel from '../components/ProductCarousel'; // Import the Produ
 const IntroScreen = () => {
     return (
      
-        <div className='centre'>
+        <div className = "background-class">
             <div id = "title-text">
             <p className='title-head'>J. F. Bell</p> 
             <p  className='intro-text'>Chorley Chilli Sauces</p>
