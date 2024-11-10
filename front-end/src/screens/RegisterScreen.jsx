@@ -51,7 +51,7 @@ const RegisterScreen = () => {
   };
 
   return (
-    <FormContainer id = "form-container">
+    <FormContainer id = "register">
       <h1>Register</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group className='my-2' controlId='name'>
