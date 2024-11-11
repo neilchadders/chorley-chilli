@@ -7,3 +7,11 @@ font-family: 'Courier New', Courier, monospace;
 border: 1px black solid;
 background: rgb(255, 255, 0, .9);
 }
+
+@media screen and (max-width: 920px){
+    .screen-background{
+        margin-top: 0;
+    
+    }
+    
+}

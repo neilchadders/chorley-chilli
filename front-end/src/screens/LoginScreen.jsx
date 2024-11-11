@@ -9,8 +9,6 @@ import { useLoginMutation } from '../slices/usersApiSlice';
 import { setCredentials } from '../slices/authSlice';
 import { toast } from 'react-toastify';
 
-import './login.css';
-
 const LoginScreen = () => {
   const [email, setEmail] = useState(''); // Set the initial state of the email to an empty string
   const [password, setPassword] = useState('');
