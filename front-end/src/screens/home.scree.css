@@ -1,0 +1,7 @@
+
+@media (min-width: 300px) {
+    .col-md {
+      flex: 1 0 0%;
+    }
+
+}
