@@ -1,6 +1,6 @@
 
 @media (min-width: 300px) {
-    .col-md {
+    .row-of-two{
       flex: 1 0 0%;
     }
 
