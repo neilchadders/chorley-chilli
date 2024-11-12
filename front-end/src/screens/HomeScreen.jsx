@@ -10,6 +10,7 @@ import Paginate from '../components/Paginate';
 import Meta from '../components/Meta';
 
 import './screen.background.css';
+import './home.screen.css';
 
 
 
