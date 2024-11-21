@@ -51,8 +51,8 @@ const ProductEditScreen = () => {
         countInStock,
       }).unwrap(); // NOTE: here we need to unwrap the Promise to catch any rejection in our catch block
       toast.success('Product updated');
-      refetch();
-      navigate('/admin/productlist');
+      refetch(); // To update the product details in the UI
+      navigate('/admin/productlist'); // Redirect to product list screen
     } catch (err) {
       toast.error(err?.data?.message || err.error);
     }
