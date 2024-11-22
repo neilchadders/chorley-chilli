@@ -11,7 +11,7 @@ const store = configureStore({
   },
   middleware: (getDefaultMiddleware) => // add to configureStoreConst after creation
     getDefaultMiddleware().concat(apiSlice.middleware),
-  devTools: true,
+  devTools: true, 
 });
 
 export default store;
