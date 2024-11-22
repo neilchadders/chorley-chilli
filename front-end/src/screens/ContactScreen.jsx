@@ -9,7 +9,7 @@ export default function ContactScreen() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const API_URL = process.env.NODE_ENV;
+        const API_URL = process.env.REACT_APP_API_URL;
         console.log("API URL:", process.env.REACT_APP_API_URL);
       await axios.post(`${API_URL}/api/send`, {
         to,
