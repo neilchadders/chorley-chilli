@@ -21,7 +21,17 @@ connectDB();
 
 const app = express(); // Initialize app
 
-app.use(cors()); // Use CORS middleware after initializing the app
+
+const allowedOrigins = ["https://chorley-chilli.onrender.com"];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true, // Include if you're using cookies or authorization headers
+  })
+);
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
