@@ -48,8 +48,8 @@ const RegisterScreen = () => {
         dispatch(setCredentials({ ...res }));
         
         // Call the backend API to send an email
-        //const API_URL = process.env.REACT_APP_API_URL; // if in development change to local host 5000
-        const API_URL = 'http://localhost:5000'
+        const API_URL = process.env.REACT_APP_API_URL; // if in development change to local host 5000
+        //const API_URL = 'http://localhost:5000'
 
 
         await axios.post(`${API_URL}/api/send`, {

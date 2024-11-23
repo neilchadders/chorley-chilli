@@ -9,6 +9,8 @@ import Loader from '../components/Loader';
 import { useCreateOrderMutation } from '../slices/ordersApiSlice';
 import { clearCartItems } from '../slices/cartSlice';
 
+
+import axios from 'axios'; //  for email sending;
 import './screen.background.css';
 
 const PlaceOrderScreen = () => {
@@ -27,23 +29,59 @@ const PlaceOrderScreen = () => {
   }, [cart.paymentMethod, cart.shippingAddress.address, navigate]);
 
   const dispatch = useDispatch();
+
   const placeOrderHandler = async () => {
-    try {
-      const res = await createOrder({
-        orderItems: cart.cartItems,
-        shippingAddress: cart.shippingAddress,
-        paymentMethod: cart.paymentMethod,
-        itemsPrice: cart.itemsPrice,
-        shippingPrice: cart.shippingPrice,
-        taxPrice: cart.taxPrice,
-        totalPrice: cart.totalPrice,
-      }).unwrap();
-      dispatch(clearCartItems());
-      navigate(`/order/${res._id}`);
-    } catch (err) {
-      toast.error(err);
-    }
-  };
+  try {
+    const res = await createOrder({
+      orderItems: cart.cartItems,
+      shippingAddress: cart.shippingAddress,
+      paymentMethod: cart.paymentMethod,
+      itemsPrice: cart.itemsPrice,
+      shippingPrice: cart.shippingPrice,
+      taxPrice: cart.taxPrice,
+      totalPrice: cart.totalPrice,
+    }).unwrap();
+
+    // Send email after successfully creating an order
+    const orderDetails = `
+      <h2>Order Confirmation</h2>
+      <p>Thank you for your order, ${cart.shippingAddress.name}!</p>
+      <p><strong>Order Summary:</strong></p>
+      <ul>
+        ${cart.cartItems
+          .map(
+            (item) =>
+              `<li>${item.qty} x ${item.name} = £${(item.qty * item.price).toFixed(
+                2
+              )}</li>`
+          )
+          .join('')}
+      </ul>
+      <p><strong>Total:</strong> £${cart.totalPrice.toFixed(2)}</p>
+      <p>We will ship your order to:</p>
+      <p>${cart.shippingAddress.address}, ${cart.shippingAddress.city}, ${cart.shippingAddress.postalCode}, ${cart.shippingAddress.country}</p>
+    `;
+
+        // Call the backend API to send an email
+        const API_URL = process.env.REACT_APP_API_URL; // if in development change to local host 5000
+        //const API_URL = 'http://localhost:5000'
+
+    await axios.post(`${API_URL}/api/send`, {
+      to: cart.shippingAddress.email,
+      senderEmail: process.env.REACT_APP_ADMIN_EMAIL, // Admin or "no-reply" email
+      senderName: "Your Store Name",
+      subject: "Order Confirmation",
+      message: orderDetails,
+    });
+
+    dispatch(clearCartItems());
+    navigate(`/order/${res._id}`);
+    toast.success("Order placed and confirmation email sent!");
+  } catch (err) {
+    toast.error(err?.data?.message || err.error);
+  }
+};
+
 
   return (
     <>

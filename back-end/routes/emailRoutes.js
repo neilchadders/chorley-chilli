@@ -23,7 +23,7 @@ router.post("/", async (req, res) => {
     to,
     subject,
     text: message,
-    html: `<p><strong>From:</strong> ${senderName} (${senderEmail})</p><p>${message}</p>`,
+    html: message,
   };
 
   try {

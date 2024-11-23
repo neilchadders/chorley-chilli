@@ -12,9 +12,9 @@ export default function ContactScreen() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-          //const API_URL = process.env.REACT_APP_API_URL; // if in development change to local host 5000
+        const API_URL = process.env.REACT_APP_API_URL; // if in development change to local host 5000
        
-      const API_URL = "http://localhost:5000"; // Change to deployed API URL for production
+      //const API_URL = "http://localhost:5000"; // Change to deployed API URL for production
       await axios.post(`${API_URL}/api/send`, {
         to,
         senderEmail,
