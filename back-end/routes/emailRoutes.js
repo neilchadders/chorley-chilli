@@ -16,14 +16,14 @@ const transporter = nodemailer.createTransport({
 
 // POST /api/send - Send an email
 router.post("/", async (req, res) => {
-  const { to, subject, message } = req.body;
+  const { to, senderEmail, senderName, subject, message } = req.body;
 
   const mailOptions = {
-    from: process.env.EMAIL_USER,
+    from: `${senderName} <${senderEmail}>`,
     to,
     subject,
     text: message,
-    html: `<p>${message}</p>`,
+    html: `<p><strong>From:</strong> ${senderName} (${senderEmail})</p><p>${message}</p>`,
   };
 
   try {

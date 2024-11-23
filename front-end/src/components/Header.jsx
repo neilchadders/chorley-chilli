@@ -51,6 +51,11 @@ const Header = () => {
                 </Nav.Link>
               </LinkContainer>
 
+              <LinkContainer to='/contact' className='links'> 
+                <Nav.Link> Contact
+                </Nav.Link>
+              </LinkContainer>
+
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto'>

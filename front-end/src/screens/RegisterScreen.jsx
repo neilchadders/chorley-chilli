@@ -9,6 +9,8 @@ import { useRegisterMutation } from '../slices/usersApiSlice';
 import { setCredentials } from '../slices/authSlice';
 import { toast } from 'react-toastify';
 
+import axios from 'axios';
+
 import './screen.background.css';
 
 
@@ -37,19 +39,35 @@ const RegisterScreen = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-
+  
     if (password !== confirmPassword) {
       toast.error('Passwords do not match');
     } else {
       try {
         const res = await register({ name, email, password }).unwrap();
         dispatch(setCredentials({ ...res }));
+        
+        // Call the backend API to send an email
+        //const API_URL = process.env.REACT_APP_API_URL; // if in development change to local host 5000
+        const API_URL = 'http://localhost:5000'
+
+
+        await axios.post(`${API_URL}/api/send`, {
+          to: email,
+          senderEmail: process.env.REACT_APP_ADMIN_EMAIL, // Admin email or site email
+          senderName: "Chorley Chilli",
+          subject: "Welcome to J.F.Bell's Chorley Chilli!",
+          message: `Hi ${name}, welcome to Chorley Chiili! We're glad to have you.`,
+        });
+        
+        toast.success("Registration successful. A confirmation email has been sent!");
         navigate(redirect);
       } catch (err) {
         toast.error(err?.data?.message || err.error);
       }
     }
   };
+  
 
   return (
 
