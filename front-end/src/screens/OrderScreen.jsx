@@ -14,6 +14,7 @@ import {
 } from '../slices/ordersApiSlice';
 
 import './screen.background.css';
+import axios from 'axios';
 
 const OrderScreen = () => {
   const { id: orderId } = useParams();
@@ -65,16 +66,48 @@ const OrderScreen = () => {
   }, [errorPayPal, loadingPayPal, order, paypal, paypalDispatch]);
 
   
-  function onApprove(data, actions) { //from paypal doc
-    return actions.order.capture().then(async function (details) { //details come from paypal
-      try {
-        await payOrder({ orderId, details }).unwrap(); //unwrap is used to get the actual data from the promise
-        toast.success('Order is paid');
-      } catch (err) {
-        toast.error(err?.data?.message || err.error);
-      }
-    });
-  }
+
+
+// Modify the onApprove function
+function onApprove(data, actions) {
+  return actions.order.capture().then(async function (details) {
+    try {
+      await payOrder({ orderId, details }).unwrap(); // unwrap() is used to get the fulfilled value of a promise
+      toast.success('Order is paid');
+
+      // Send confirmation email
+      const emailData = {
+        to: order.user.email, // Customer's email
+        senderEmail: 'neilchadders1983@gmail.com', // Replace with your email
+        senderName: "J.F Bell's Chorley Chilli",
+        subject: `Order Confirmation - Order #${orderId}`,
+        message: `
+          <h1>Thank you for your purchase!</h1>
+          <p>Order ID: ${orderId}</p>
+          <p>Total Price: £${order.totalPrice}</p>
+          <p>Items:</p>
+          <ul>
+            ${order.orderItems
+              .map(
+                (item) =>
+                  `<li>${item.qty} x ${item.name} = £${item.qty * item.price}</li>`
+              )
+              .join('')}
+          </ul>
+          <p>Your order will be delivered to:</p>
+          <p>${order.shippingAddress.address}, ${order.shippingAddress.city}, ${order.shippingAddress.postalCode}, ${order.shippingAddress.country}</p>
+        `,
+      };
+
+      // Call the email API
+      await axios.post('/api/send', emailData);
+      toast.success('Confirmation email sent successfully');
+    } catch (err) {
+      toast.error(err?.data?.message || err.error);
+    }
+  });
+}
+
 
   // TESTING ONLY! REMOVE BEFORE PRODUCTION
  {/* async function onApproveTest() {
@@ -82,11 +115,11 @@ const OrderScreen = () => {
      refetch();
       console.log(order.isPaid)
      toast.success('Order is paid');
-   } */}
+   } 
 
   function onError(err) {
     toast.error(err.message);
-  }
+  } */}
 
   function createOrder(data, actions) {
     return actions.order
