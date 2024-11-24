@@ -3,5 +3,5 @@ const asyncHandler = (fn) => (req, res, next) =>
   
   export default asyncHandler;
 
-  // this will mea mean we dont need to write out the whole syntax each time
+  // this will mean mean we dont need to write out the whole syntax each time
   // Also, mongoose methods are async

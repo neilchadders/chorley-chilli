@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import Loader from '../components/Loader';
 import FormContainer from '../components/FormContainer';
 
+import ForgetPasswordScreen from './ForgetPasswordScreen';
+
 import { useLoginMutation } from '../slices/usersApiSlice';
 import { setCredentials } from '../slices/authSlice';
 import { toast } from 'react-toastify';
@@ -85,6 +87,11 @@ const LoginScreen = () => {
           <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
             Register
           </Link>
+
+          <Link to={`/forgetPassword}`}>
+                            Forgot Password?
+                          </Link>
+          
         </Col>
   </Row>
     </FormContainer>
