@@ -70,7 +70,7 @@ const OrderScreen = () => {
 
 // Modify the onApprove function
 function onApprove(data, actions) {
-  return actions.order.capture().then(async function (details) {
+  return actions.order.capture().then(async function (details) { // Capture the funds from the transaction
     try {
       await payOrder({ orderId, details }).unwrap(); // unwrap() is used to get the fulfilled value of a promise
       toast.success('Order is paid');
@@ -99,8 +99,11 @@ function onApprove(data, actions) {
         `,
       };
 
-      // Call the email API
-      await axios.post('/api/send', emailData);
+      const API_URL = process.env.REACT_APP_API_URL; // if in development change to local host 5000
+        //const API_URL = 'http://localhost:5000'
+
+
+      await axios.post(`${API_URL}/api/send`, emailData);
       toast.success('Confirmation email sent successfully');
     } catch (err) {
       toast.error(err?.data?.message || err.error);
@@ -118,7 +121,7 @@ function onApprove(data, actions) {
    } 
  */}
 
- 
+
   function onError(err) {
     toast.error(err.message);
   } 
