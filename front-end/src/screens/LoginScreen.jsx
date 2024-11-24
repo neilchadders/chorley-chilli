@@ -87,7 +87,7 @@ const LoginScreen = () => {
             Register
           </Link>
 
-          <Link to={`/forgetPassword}`}>
+          <Link to={`/forget-password`}>
           Forgot Password?
          </Link>
           
