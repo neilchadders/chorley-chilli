@@ -18,8 +18,8 @@ function addDecimals(num) {
     // Calculate the shipping price
     const shippingPrice = itemsPrice > 100 ? 0 : 10;
   
-    // Calculate the tax price
-    const taxPrice = 0.15 * itemsPrice;
+    // Calculate the tax price  const taxPrice = 0.15 * itemsPrice;
+   
   
     // Calculate the total price
     const totalPrice = itemsPrice + shippingPrice + taxPrice;
@@ -28,7 +28,7 @@ function addDecimals(num) {
     return {
       itemsPrice: addDecimals(itemsPrice),
       shippingPrice: addDecimals(shippingPrice),
-      taxPrice: addDecimals(taxPrice),
+      //taxPrice: addDecimals(taxPrice),
       totalPrice: addDecimals(totalPrice),
     };
   }
