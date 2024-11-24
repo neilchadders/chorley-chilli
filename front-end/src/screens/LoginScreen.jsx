@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import Loader from '../components/Loader';
 import FormContainer from '../components/FormContainer';
 
-import ForgetPasswordScreen from './ForgetPasswordScreen';
 
 import { useLoginMutation } from '../slices/usersApiSlice';
 import { setCredentials } from '../slices/authSlice';
@@ -89,8 +88,8 @@ const LoginScreen = () => {
           </Link>
 
           <Link to={`/forgetPassword}`}>
-                            Forgot Password?
-                          </Link>
+          Forgot Password?
+         </Link>
           
         </Col>
   </Row>
