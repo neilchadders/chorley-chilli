@@ -116,10 +116,12 @@ function onApprove(data, actions) {
       console.log(order.isPaid)
      toast.success('Order is paid');
    } 
+ */}
 
+ 
   function onError(err) {
     toast.error(err.message);
-  } */}
+  } 
 
   function createOrder(data, actions) {
     return actions.order
