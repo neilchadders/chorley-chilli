@@ -22,7 +22,7 @@ export const requestPasswordReset = async (req, res) => {
     await user.save();
 
     // Send email with reset token
-    const resetUrl = `${process.env.FRONTEND_URL}/reset-password/${resetToken}`;
+    const resetUrl = `${process.env.REACT_APP_API_URL}/reset-password/${resetToken}`;
     const message = `You requested a password reset. Reset your password using this link: ${resetUrl}`;
 
     await sendEmail(user.email, "Password Reset Request", message);
