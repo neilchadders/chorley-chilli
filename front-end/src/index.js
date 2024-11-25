@@ -60,7 +60,7 @@ const router = createBrowserRouter(
       <Route path='/register' element={<RegisterScreen />} />
       <Route path='/contact' element={<ContactScreen />} /> 
       <Route path='/forget-password' element={<RequestResetScreen />} />
-      <Route path='/reset-password' element={<ResetPasswordScreen />} />
+      <Route path='/reset-password/:token' element={<ResetPasswordScreen />} />
       {/* Registered users */}
       <Route path='' element={<PrivateRoute />}>
         <Route path='/shipping' element={<ShippingScreen />} />
