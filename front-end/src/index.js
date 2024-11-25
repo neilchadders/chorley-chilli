@@ -32,6 +32,7 @@ import UserEditScreen from './screens/admin/UserEditScreen';
 import IntroScreen from './screens/IntroScreen';
 import AboutScreen from './screens/AboutScreen';
 import ContactScreen from './screens/ContactScreen'; // Import EmailScreen
+import ResetPasswordScreen from './screens/ResetPasswordScreen';
 import RequestResetScreen from './screens/RequestResetScreen';
 import store from './store';
 import { Provider } from 'react-redux';
@@ -59,6 +60,7 @@ const router = createBrowserRouter(
       <Route path='/register' element={<RegisterScreen />} />
       <Route path='/contact' element={<ContactScreen />} /> 
       <Route path='/forget-password' element={<RequestResetScreen />} />
+      <Route path='/reset-password' element={<ResetPasswordScreen />} />
       {/* Registered users */}
       <Route path='' element={<PrivateRoute />}>
         <Route path='/shipping' element={<ShippingScreen />} />
