@@ -14,7 +14,7 @@ const ForgetPasswordScreen = () => {
 
     try {
       // Make API call to send forgot password email
-      await axios.post(`${API_URL}/forget-password`, { email });
+      await axios.post(`${API_URL}/api/send`, { email });
       toast.success("Email sent successfully");
     } catch (error) {
       // Handle errors based on server response
