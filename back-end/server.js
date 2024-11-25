@@ -10,6 +10,8 @@ import cors from "cors"; // Use import for CORS
 import orderRoutes from "./routes/orderRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
 import emailRoutes from "./routes/emailRoutes.js"; // Import email route
+import forgetPasswordRoutes from "./routes/forgetPasswordRoutes.js"; // Import forget password route
+
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 
 
@@ -41,7 +43,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/upload", uploadRoutes);
 app.use("/api/send", emailRoutes); // Register email route
-
+app.use("/api", forgetPasswordRoutes); // Register forget password route
 app.get("/api/config/paypal", (req, res) =>
   res.send({ clientId: process.env.PAYPAL_CLIENT_ID })
 );
