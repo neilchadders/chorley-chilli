@@ -1,27 +1,30 @@
 import React, { useState } from 'react';
 import FormContainer from "../components/FormContainer";
 import { Form, Button } from 'react-bootstrap';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const ForgetPasswordScreen = () => {
   const [email, setEmail] = useState(""); // Correct state initialization
-
-
-  const API_URL = process.env.REACT_APP_API_URL
   
-  const submitForgotEmail = (e) => {
-   const API_URL = process.env.REACT_APP_API_URL;
-    axios
-    .post(`${API_URL}//forget-password`, email)
-    .then((response) => {
+  const submitForgotEmail = async (e) => {
+    e.preventDefault(); // Prevent form from reloading the page
+    console.log(email);
+    const API_URL = process.env.REACT_APP_API_URL;
+
+    try {
+      // Make API call to send forgot password email
+      await axios.post(`${API_URL}/forget-password`, { email });
       toast.success("Email sent successfully");
-    })
-    .catch((error) => {
-      if (error.response.status === 404) {
+    } catch (error) {
+      // Handle errors based on server response
+      if (error.response && error.response.status === 404) {
         toast.error("Email not found");
       } else {
         toast.error("Server error");
       }
-    });
+    }
+  };
 
   return (
     <div>
@@ -45,5 +48,5 @@ const ForgetPasswordScreen = () => {
     </div>
   );
 };
-}
+
 export default ForgetPasswordScreen;
