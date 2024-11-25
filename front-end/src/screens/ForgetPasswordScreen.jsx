@@ -5,10 +5,23 @@ import { Form, Button } from 'react-bootstrap';
 const ForgetPasswordScreen = () => {
   const [email, setEmail] = useState(""); // Correct state initialization
 
+
+  const API_URL = process.env.REACT_APP_API_URL
+  
   const submitForgotEmail = (e) => {
-    e.preventDefault();
-    console.log(email);
-  };
+   const API_URL = process.env.REACT_APP_API_URL;
+    axios
+    .post(`${API_URL}//forget-password`, email)
+    .then((response) => {
+      toast.success("Email sent successfully");
+    })
+    .catch((error) => {
+      if (error.response.status === 404) {
+        toast.error("Email not found");
+      } else {
+        toast.error("Server error");
+      }
+    });
 
   return (
     <div>
