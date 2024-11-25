@@ -43,7 +43,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/upload", uploadRoutes);
 app.use("/api/send", emailRoutes); // Register email route
-app.use("/api", forgetPasswordRoutes); // Register forget password route
+app.use("/api/forget-password", forgetPasswordRoutes); // Register forget password route
 app.get("/api/config/paypal", (req, res) =>
   res.send({ clientId: process.env.PAYPAL_CLIENT_ID })
 );

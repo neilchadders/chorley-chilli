@@ -12,6 +12,18 @@ const ForgetPasswordScreen = () => {
     console.log(email);
     const API_URL = process.env.REACT_APP_API_URL;
 
+    try {
+      // Make API call to send forgot password email
+      await axios.post(`${API_URL}/forget-password`, { email });
+      toast.success("Email sent successfully");
+    } catch (error) {
+      // Handle errors based on server response
+      if (error.response && error.response.status === 404) {
+        toast.error("Email not found");
+      } else {
+        toast.error("Server error");
+      }
+    }
   };
 
   return (
