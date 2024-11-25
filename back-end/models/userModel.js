@@ -21,10 +21,13 @@ const userSchema = mongoose.Schema(
       required: true,
       default: false,
     },
+    resetPasswordToken: String, // To store the token
+    resetPasswordExpires: Date, // Token expiration time
   },
   {
     timestamps: true,
   }
+  
 );
 
 // Match user entered password to hashed password in database
