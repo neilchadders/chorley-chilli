@@ -45,5 +45,5 @@ const ForgetPasswordScreen = () => {
     </div>
   );
 };
-
+}
 export default ForgetPasswordScreen;
