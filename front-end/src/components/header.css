@@ -26,3 +26,19 @@ margin-bottom:15px ;
 margin-left: 10px;
 }
 
+.header .links {
+    text-align: center;
+    margin: 0 15px; /* Adjust spacing between links */
+    font-size: 1rem; /* Adjust font size */
+  }
+  
+  .header .brand {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px; /* Adds spacing between the brand and links */
+  }
+  
+  .navbar .justify-content-center {
+    display: flex;
+    justify-content: center;
+  }
