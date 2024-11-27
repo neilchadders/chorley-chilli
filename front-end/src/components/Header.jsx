@@ -1,3 +1,16 @@
+import { Navbar, Nav, Container, NavDropdown, Badge } from 'react-bootstrap';
+import { FaShoppingCart, FaUser } from 'react-icons/fa';
+import { LinkContainer } from 'react-router-bootstrap';
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { useLogoutMutation } from '../slices/usersApiSlice';
+import { logout } from '../slices/authSlice';
+import SearchBox from './SearchBox';
+import { resetCart } from '../slices/cartSlice';
+
+import './header.css';
+
+
 {/*
 
 import { Navbar, Nav, Container, NavDropdown, Badge } from 'react-bootstrap';
@@ -115,17 +128,7 @@ const Header = () => {
 export default Header;
 */}
 
-import { Navbar, Nav, Container, NavDropdown, Badge } from 'react-bootstrap';
-import { FaShoppingCart, FaUser } from 'react-icons/fa';
-import { LinkContainer } from 'react-router-bootstrap';
-import { useSelector, useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { useLogoutMutation } from '../slices/usersApiSlice';
-import { logout } from '../slices/authSlice';
-import SearchBox from './SearchBox';
-import { resetCart } from '../slices/cartSlice';
 
-import './header.css';
 
 const Header = () => {
   const { cartItems } = useSelector((state) => state.cart);
