@@ -15,7 +15,8 @@ const ResetPassword = () => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
-      toast.error("Passwords do not match");
+      toast.error("Passwords do not match. Please request another reset link.");
+      navigate("/forget-password");
       return;
     }
 
@@ -27,9 +28,9 @@ const ResetPassword = () => {
       navigate("/login");
     } catch (error) {
       const errorMessage =
-        error.response?.data?.message || "An error occurred. Please try again.";
+        error.response?.data?.message || "An error occurred. Please request another password link.";
       toast.error(errorMessage);
-      navigate("/request-password");
+      navigate("/forget-password");
     }
   };
 
