@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import { toast } from "react-toastify";
 import axios from "axios";
@@ -7,9 +7,9 @@ import FormContainer from "../components/FormContainer";
 
 const ResetPassword = () => {
   const { token } = useParams();
+  const navigate = useNavigate();
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [message, setMessage] = useState("");
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -23,14 +23,13 @@ const ResetPassword = () => {
       const { data } = await axios.post(`/api/forget-password/${token}`, {
         password,
       });
-      setMessage(data.message);
-      toast.success(data.message);
-      setPassword("");
-      setConfirmPassword("");
+      toast.success(data.message || "Password reset successful");
+      navigate("/login");
     } catch (error) {
-      const errorMessage = error.response?.data?.message || "An error occurred";
-      setMessage(errorMessage);
+      const errorMessage =
+        error.response?.data?.message || "An error occurred. Please try again.";
       toast.error(errorMessage);
+      navigate("/request-password");
     }
   };
 
@@ -64,16 +63,6 @@ const ResetPassword = () => {
           Reset Password
         </Button>
       </Form>
-
-      {message && (
-        <Row className="py-3">
-          <Col>
-            <p className={message.includes("success") ? "text-success" : "text-danger"}>
-              {message}
-            </p>
-          </Col>
-        </Row>
-      )}
     </FormContainer>
   );
 };
