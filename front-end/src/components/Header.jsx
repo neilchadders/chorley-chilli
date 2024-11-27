@@ -23,8 +23,6 @@ const Header = () => {
     try {
       await logoutApiCall().unwrap();
       dispatch(logout());
-      // NOTE: here we need to reset cart state for when a user logs out so the next
-      // user doesn't inherit the previous users cart and shipping
       dispatch(resetCart());
       navigate('/login');
     } catch (err) {
@@ -33,38 +31,21 @@ const Header = () => {
   };
 
   return (
-    <header className = "header">
-      <Navbar variant='light' expand='lg' collapseOnSelect> 
+    <header className="header">
+      <Navbar variant="light" expand="lg" collapseOnSelect className = "navbar">
         <Container>
-          <LinkContainer to='/'>
-            <Navbar.Brand className='brand'>
-              J. F. Bell
-            </Navbar.Brand>
+          <LinkContainer to="/">
+            <Navbar.Brand className="brand">J. F. Bell</Navbar.Brand>
           </LinkContainer>
-          <LinkContainer to='/shop' className='links'>
-                <Nav.Link> Shop 
-                </Nav.Link>
-              </LinkContainer>
-
-              <LinkContainer to='/about' className='links'> 
-                <Nav.Link> About
-                </Nav.Link>
-              </LinkContainer>
-
-              <LinkContainer to='/contact' className='links'> 
-                <Nav.Link> Contact
-                </Nav.Link>
-              </LinkContainer>
-
-          <Navbar.Toggle aria-controls='basic-navbar-nav' />
-          <Navbar.Collapse id='basic-navbar-nav'>
-            <Nav className='ms-auto'>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
               <SearchBox />
-              <LinkContainer to='/cart'>
+              <LinkContainer to="/cart">
                 <Nav.Link>
                   <FaShoppingCart /> Cart
                   {cartItems.length > 0 && (
-                    <Badge pill bg='success' style={{ marginLeft: '5px' }}>
+                    <Badge pill bg="success" style={{ marginLeft: '5px' }}>
                       {cartItems.reduce((a, c) => a + c.qty, 0)}
                     </Badge>
                   )}
@@ -72,8 +53,8 @@ const Header = () => {
               </LinkContainer>
               {userInfo ? (
                 <>
-                  <NavDropdown title={userInfo.name} id='username'>
-                    <LinkContainer to='/profile'>
+                  <NavDropdown title={userInfo.name} id="username">
+                    <LinkContainer to="/profile">
                       <NavDropdown.Item>Profile</NavDropdown.Item>
                     </LinkContainer>
                     <NavDropdown.Item onClick={logoutHandler}>
@@ -82,23 +63,21 @@ const Header = () => {
                   </NavDropdown>
                 </>
               ) : (
-                <LinkContainer to='/login'>
+                <LinkContainer to="/login">
                   <Nav.Link>
                     <FaUser /> Sign In
                   </Nav.Link>
                 </LinkContainer>
               )}
-
-              {/* Admin Links */}
               {userInfo && userInfo.isAdmin && (
-                <NavDropdown title='Admin' id='adminmenu'>
-                  <LinkContainer to='/admin/productlist'>
+                <NavDropdown title="Admin" id="adminmenu">
+                  <LinkContainer to="/admin/productlist">
                     <NavDropdown.Item>Products</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to='/admin/orderlist'>
+                  <LinkContainer to="/admin/orderlist">
                     <NavDropdown.Item>Orders</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to='/admin/userlist'>
+                  <LinkContainer to="/admin/userlist">
                     <NavDropdown.Item>Users</NavDropdown.Item>
                   </LinkContainer>
                 </NavDropdown>
@@ -107,6 +86,21 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+
+      {/* Nav.Links for Shop, About, and Contact at the bottom */}
+      <div className="bottom-nav">
+        <Container className="d-flex justify-content-evenly">
+          <LinkContainer to="/shop">
+            <Nav.Link>Shop</Nav.Link>
+          </LinkContainer>
+          <LinkContainer to="/about">
+            <Nav.Link>About</Nav.Link>
+          </LinkContainer>
+          <LinkContainer to="/contact">
+            <Nav.Link>Contact</Nav.Link>
+          </LinkContainer>
+        </Container>
+      </div>
     </header>
   );
 };
