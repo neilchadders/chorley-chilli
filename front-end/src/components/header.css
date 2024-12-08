@@ -4,8 +4,10 @@
 .header {
     font-family: 'Courier New', Courier, monospace;
    color: black;
-   background: rgb(255, 255, 0);
+   background-color: orangered;
    padding-bottom: 20px;
+  
+ 
 
 }
 
@@ -13,6 +15,8 @@
     
     font-family: 'Bungee Tint', sans-serif;
     font-size: 1.5em;
+    background-color: yellow;
+    padding: 1%;
 }
 
 .nav-link{

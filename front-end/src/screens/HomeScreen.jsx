@@ -8,6 +8,7 @@ import Loader from '../components/Loader';
 import Message from '../components/Message';
 import Paginate from '../components/Paginate';
 import Meta from '../components/Meta';
+import ProductCarousel from '../components/ProductCarousel'; // Import the ProductCarousel component
 
 import './screen.background.css';
 import './home.screen.css';
@@ -34,6 +35,7 @@ const HomeScreen = () => {
         <>
           <Meta id = "homescreen" className = "screen-background"/>
           <h1 id = "opening">Latest Products</h1>
+          <ProductCarousel />
           <Row>
             {data.products.map((product) => (
               <Col key={product._id} sm={12} md={6} lg={4} xl={3} className = "row-of-two">

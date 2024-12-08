@@ -1,7 +1,6 @@
 
 import './intro.css'
 import './screen.background.css'
-import ProductCarousel from '../components/ProductCarousel'; // Import the ProductCarousel component
 
 const IntroScreen = () => {
     return (
@@ -14,9 +13,7 @@ const IntroScreen = () => {
             </div>
                  
        
-        <div className='intro_text_carousel'>
-             <ProductCarousel/> 
-        </div>
+       
        
         </div>
       
