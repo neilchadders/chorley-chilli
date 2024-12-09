@@ -4,8 +4,8 @@
     margin-top: 80px;
     
     font-family: 'Courier New', Courier, monospace;
-   border: 1px black solid;
-    background: rgb(255, 255, 0, .9);
+   border: red solid 4px;
+    background: rgb(255, 255, 0, .7);
   
   }
 
@@ -13,7 +13,7 @@
     font-family: "Bungee Tint", sans-serif;
     word-spacing: 1rem;
     text-align: center;
-  
+    padding-top: 50px;
   }
   
 

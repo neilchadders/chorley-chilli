@@ -16,7 +16,8 @@
     font-family: 'Bungee Tint', sans-serif;
     font-size: 1.5em;
     background-color: yellow;
-    padding: 1%;
+    padding: 1.5%;
+    border: red solid 4px; 
 }
 
 .nav-link{
@@ -29,4 +30,15 @@
 .brand:hover, .nav-link:hover{
     color: red;
     scale: 1.1;
+}
+
+
+
+
+
+@media screen and (max-width: 920px){
+    .brand{
+       font-size: 1em;
+    }
+    
 }

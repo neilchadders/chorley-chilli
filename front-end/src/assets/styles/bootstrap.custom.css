@@ -210,7 +210,7 @@ body {
 background-image: url('./background2.jpg');
   background-repeat: repeat;
   background-attachment: fixed;
-  background-size: 15%;
+  background-size: cover;
   background-position: center;
   
   

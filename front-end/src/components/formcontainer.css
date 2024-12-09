@@ -3,7 +3,7 @@
 background-color: yellow;
 margin-top: 80px;
 padding: 30px;
-font-family: 'Courier New', Courier, monospace;
-border: 1px black solid;
-background: rgb(255, 255, 0, .9);
+font-family: 'Bungee Tint', sans-serif;
+background: rgb(255, 255, 0, .5);
+border: solid red 5px;
 }
