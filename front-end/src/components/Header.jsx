@@ -8,6 +8,8 @@ import { logout } from '../slices/authSlice';
 import SearchBox from './SearchBox';
 import { resetCart } from '../slices/cartSlice';
 
+
+
 import './header.css';
 
 const Header = () => {

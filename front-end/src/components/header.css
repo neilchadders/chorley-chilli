@@ -22,9 +22,9 @@
 
 .nav-link{
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1em;
+    font-size: 1.2em;
    
-    color: black;
+    color: yellow;
 }
 
 .brand:hover, .nav-link:hover{

@@ -1,6 +1,8 @@
 import './intro.css'
 import './screen.background.css'
 import ProductCarousel from '../components/ProductCarousel'; // Import the ProductCarousel component
+import { ReactTyped } from "react-typed";
+
 
 const IntroScreen = () => {
     return (
@@ -9,7 +11,13 @@ const IntroScreen = () => {
             <div id = "title-text">
             <p className='title-head'>J. F. Bell</p> 
             <p  className='intro-text'>Chorley Chilli Sauces</p>
-            <p className='intro-text'>Tasty Spices at Tasty Prices</p>
+            
+            <ReactTyped
+                strings={["Tasty Spices at Tasty Prices"] }          
+                typeSpeed={100}
+                backSpeed={50}
+                loop
+                className='intro-text'  />
             </div>
 
 
