@@ -22,9 +22,9 @@ const IntroScreen = () => {
             </div>
 
 
-        <div className='intro_text_carousel'>
+        {/*<div className='intro_text_carousel'>
              <ProductCarousel/> 
-        </div>
+        </div> */}
 
         </div>
 

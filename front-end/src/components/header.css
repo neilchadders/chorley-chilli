@@ -1,14 +1,10 @@
 
-
-
 .header {
     font-family: 'Courier New', Courier, monospace;
    color: yellow;
    background-color: black;
    padding-bottom: 20px;
   
- 
-
 }
 
 .brand{
@@ -46,5 +42,7 @@
     .brand{
        font-size: 1em;
     }
-    
+    .nav-link{
+        font-size: .8em;
+    }
 }

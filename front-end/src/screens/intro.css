@@ -6,7 +6,7 @@
   text-align: center;
   background-image: url("./habanerowhiteback.jpg");
   background-size: cover;
- 
+  height: 80vh;
 
 }
 .title-head{
@@ -41,8 +41,7 @@
   @media screen and (max-width: 920px){
     #title-text{
         font-size: .5rem;
-       
-    
+          
     }
 
     .centre{
