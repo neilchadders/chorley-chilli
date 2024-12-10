@@ -4,6 +4,9 @@
   font-family: "Bungee Tint", sans-serif;
   word-spacing: 1rem;
   text-align: center;
+  background-image: url("./habanerowhiteback.jpg");
+  background-size: cover;
+ 
 
 }
 .title-head{

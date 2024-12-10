@@ -3,8 +3,8 @@
 
 .header {
     font-family: 'Courier New', Courier, monospace;
-   color: black;
-   background-color: orangered;
+   color: yellow;
+   background-color: black;
    padding-bottom: 20px;
   
  
@@ -27,7 +27,13 @@
     color: yellow;
 }
 
-.brand:hover, .nav-link:hover{
+.nav-link.active {
+    /* Remove active styles */
+    background-color: transparent !important;
+    color: inherit !important;
+  }
+
+.brand:active, .nav-link:active{
     color: red;
     scale: 1.1;
 }
