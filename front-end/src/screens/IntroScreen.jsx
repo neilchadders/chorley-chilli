@@ -13,19 +13,17 @@ const IntroScreen = () => {
             <p className='title-head'>J. F. Bell</p> 
             <p  className='intro-text'>Chorley Chilli Sauces</p>
             
-            <ReactTyped
+            
+       <div className='intro_text_carousel'>
+             <ProductCarousel/> 
+        </div> 
+        <ReactTyped
                 strings={["Tasty Spices at Tasty Prices"] }          
                 typeSpeed={100}
                 backSpeed={50}
                 loop
-                className='intro-text'  />
+                className='intro-text typed'  />
             </div>
-
-
-        {/*<div className='intro_text_carousel'>
-             <ProductCarousel/> 
-        </div> */}
-
         </div>
 
     );

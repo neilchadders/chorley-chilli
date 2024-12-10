@@ -5,8 +5,9 @@
   word-spacing: 1rem;
   text-align: center;
   background-image: url("./habanerowhiteback.jpg");
-  background-size: cover;
+  background-size: cover ;
   height: 80vh;
+ 
 
 }
 .title-head{
@@ -17,10 +18,12 @@
 .intro-text{
     font-size: 2em;
     
-
 }
 
-
+.typed{
+  padding-left: 5%;
+  padding-right: 5%
+}
 
 .carousel .carousel-item {
     height: 500px;
@@ -50,7 +53,7 @@
              
     }
     .carousel-item{
-      max-height: 28rem;
+      max-height: 20rem;
             border:solid black 1px;
     }
   }
