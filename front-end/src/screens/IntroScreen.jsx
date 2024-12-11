@@ -3,7 +3,8 @@ import './screen.background.css'
 import { Nav} from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { ReactTyped } from "react-typed";
-import NewSlider from '../components/NewSlider';
+import ProductCarousel from '../components/ProductCarousel';
+
 
 const IntroScreen = () => {
     return (
@@ -15,11 +16,11 @@ const IntroScreen = () => {
                 <p className='intro-text'>Chorley Chilli Sauces</p>      
             </div>
             
-            <LinkContainer className = "enter-button" to="/shop">
-                <Nav.Link>Shop</Nav.Link>
+            <LinkContainer className = "enter-button-container" to="/shop">
+                <Nav.Link className = "enter-button">Enter</Nav.Link>
             </LinkContainer> 
 
-            <NewSlider />
+     
         
         <ReactTyped
                 strings={["Tasty Spices at Tasty Prices"] }          
@@ -27,9 +28,10 @@ const IntroScreen = () => {
                 backSpeed={50}
                 loop
                 className='intro-text typed'  />
+            <ProductCarousel />
             </div>
        
-
+           
     );
 }
 

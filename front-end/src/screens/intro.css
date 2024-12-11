@@ -6,18 +6,14 @@
   font-family: "Bungee Tint", sans-serif;
   word-spacing: 1rem;
   text-align: center;
- 
-
-
 }
+
 .title-head{
  font-size: 4em;
-
 }
 
 .intro-text{
     font-size: 2em;
-    
 }
 
 .typed{
@@ -34,11 +30,13 @@
   justify-content: center;
   align-items: center;
   margin: 5%;
+  padding: 1.5%;
   font-family: 'Bungee Tint', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.2em;
     background-color: yellow;
-    padding: 1.5%;
+    
     border: red solid 4px; 
+    max-width: 30%;
 }
   
   .carousel-item img {
