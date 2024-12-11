@@ -31,7 +31,7 @@ export default function SimpleSlider() {
           <img src={habanero} alt="habanero" />
       </div>
       
-      <div>
+      <div className = "slider-div">
           <img src={greenchilli} alt="greencgilli" />
       </div>
       

@@ -1,7 +1,8 @@
 
 
 .slider-div {
-  
+    max-width: 30vw;
+    max-height: 30vw;
 }
 
 .slider-div img {
