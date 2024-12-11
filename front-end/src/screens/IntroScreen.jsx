@@ -1,22 +1,26 @@
 import './intro.css'
 import './screen.background.css'
-import ProductCarousel from '../components/ProductCarousel'; // Import the ProductCarousel component
+import { Nav} from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import { ReactTyped } from "react-typed";
-import habanero from './habanerowhiteback.jpg'
+import NewSlider from '../components/NewSlider';
 
 const IntroScreen = () => {
     return (
 
-        <div className = "screen-background">
+        <div className = "screen-background main-container">
             
             <div id = "title-text">
-            <p className='title-head'>J. F. Bell</p> 
-            <p  className='intro-text'>Chorley Chilli Sauces</p>
+                <p className='title-head'>J. F. Bell</p> 
+                <p className='intro-text'>Chorley Chilli Sauces</p>      
+            </div>
             
-            
-       <div className='intro_text_carousel'>
-             <ProductCarousel/> 
-        </div> 
+            <LinkContainer className = "enter-button" to="/shop">
+                <Nav.Link>Shop</Nav.Link>
+            </LinkContainer> 
+
+            <NewSlider />
+        
         <ReactTyped
                 strings={["Tasty Spices at Tasty Prices"] }          
                 typeSpeed={100}
@@ -24,7 +28,7 @@ const IntroScreen = () => {
                 loop
                 className='intro-text typed'  />
             </div>
-        </div>
+       
 
     );
 }

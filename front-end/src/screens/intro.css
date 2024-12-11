@@ -1,13 +1,13 @@
-
+.main-container{
+  min-height: 60vh;
+}
 
 #title-text{    
   font-family: "Bungee Tint", sans-serif;
   word-spacing: 1rem;
   text-align: center;
-  background-image: url("./habanerowhiteback.jpg");
-  background-size: cover ;
-  height: 80vh;
  
+
 
 }
 .title-head{
@@ -21,20 +21,32 @@
 }
 
 .typed{
-  padding-left: 5%;
-  padding-right: 5%
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  font-size: 2em;
+ 
 }
 
-.carousel .carousel-item {
-    height: 500px;
-  }
+.enter-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  font-family: 'Bungee Tint', sans-serif;
+    font-size: 1.5em;
+    background-color: yellow;
+    padding: 1.5%;
+    border: red solid 4px; 
+}
   
   .carousel-item img {
       position: absolute;
       object-fit: cover;
       top: 0;
       left: 0;
-      min-height: 500px;
+      max-height: 25rem;
   }
   .carousel-control-prev-icon, .carousel-control-next-icon {
     
@@ -54,6 +66,9 @@
     }
     .carousel-item{
       max-height: 20rem;
-            border:solid black 1px;
+           
+    }
+    .typed{
+      font-size: .8em;
     }
   }
