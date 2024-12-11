@@ -35,7 +35,7 @@ const HomeScreen = () => {
         <>
           <Meta id = "homescreen" className = "screen-background"/>
           <h1 id = "opening">Latest Products</h1>
-          <ProductCarousel />
+          <ProductCarousel className = "shop-carousel"/>
           <Row>
             {data.products.map((product) => (
               <Col key={product._id} sm={12} md={6} lg={4} xl={3} className = "row-of-two">

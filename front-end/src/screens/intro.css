@@ -35,10 +35,13 @@
     font-size: 1.2em;
     background-color: yellow;
     
-    border: red solid 4px; 
+   
     max-width: 30%;
 }
   
+.intro-carousel{
+  max-width: 20%;
+}
 
   .carousel-control-prev-icon, .carousel-control-next-icon {
     

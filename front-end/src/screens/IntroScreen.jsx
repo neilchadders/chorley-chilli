@@ -22,7 +22,7 @@ const IntroScreen = () => {
             </LinkContainer> 
             </div>
         <div>
-        <ProductCarousel />
+        <ProductCarousel className = "intro-carousel" />
         </div>
         
         <div>
