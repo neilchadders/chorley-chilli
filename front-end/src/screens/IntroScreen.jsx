@@ -16,20 +16,24 @@ const IntroScreen = () => {
                 <p className='intro-text'>Chorley Chilli Sauces</p>      
             </div>
             
+            <div>
             <LinkContainer className = "enter-button-container" to="/shop">
                 <Nav.Link className = "enter-button">Enter</Nav.Link>
             </LinkContainer> 
-
-     
+            </div>
+        <div>
+        <ProductCarousel />
+        </div>
         
+        <div>
         <ReactTyped
                 strings={["Tasty Spices at Tasty Prices"] }          
                 typeSpeed={100}
                 backSpeed={50}
                 loop
                 className='intro-text typed'  />
-            <ProductCarousel />
-            </div>
+           </div>
+        </div>
        
            
     );
