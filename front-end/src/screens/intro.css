@@ -39,13 +39,7 @@
     max-width: 30%;
 }
   
-  .carousel-item img {
-      position: absolute;
-      object-fit: cover;
-      top: 0;
-      left: 0;
-      max-height: 25rem;
-  }
+
   .carousel-control-prev-icon, .carousel-control-next-icon {
     
     background-color: black;
