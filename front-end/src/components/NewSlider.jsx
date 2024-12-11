@@ -1,5 +1,4 @@
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 
 import habanero from './habanero.jpg'
 import greenchilli from './greenchilli.png'
