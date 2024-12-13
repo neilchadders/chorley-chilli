@@ -1,5 +1,6 @@
 .main-container{
-  min-height: 60vh;
+  
+  border: none;
 }
 
 #title-text{    
@@ -20,28 +21,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5%;
+  padding-bottom: 3%;
   font-size: 2em;
- 
 }
 
-.enter-button{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5%;
-  padding: 1.5%;
-  font-family: 'Bungee Tint', sans-serif;
-    font-size: 1.2em;
-    background-color: yellow;
-    
-   
-    max-width: 30%;
-}
   
-.intro-carousel{
-  max-width: 20%;
-}
+
 
   .carousel-control-prev-icon, .carousel-control-next-icon {
     

@@ -1,11 +1,10 @@
 .screen-background{
 color: black;
 background-color: yellow;
-margin-top: 180px;
-
+margin-top: 5%;
 font-family: 'Courier New', Courier, monospace;
 BORDER:SOLID RED 5PX;
-background: rgb(255, 255, 0, .9);
+background: rgba(255, 255, 0, 0.9);
 }
 
 @media screen and (max-width: 920px){

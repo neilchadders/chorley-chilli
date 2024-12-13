@@ -9,6 +9,8 @@ import Message from '../components/Message';
 import Paginate from '../components/Paginate';
 import Meta from '../components/Meta';
 import ProductCarousel from '../components/ProductCarousel'; // Import the ProductCarousel component
+import IntroScreen from './IntroScreen';
+
 
 import './screen.background.css';
 import './home.screen.css';
@@ -33,6 +35,7 @@ const HomeScreen = () => {
         </Message>
       ) : (
         <>
+        <IntroScreen />
           <Meta id = "homescreen" className = "screen-background"/>
           <h1 id = "opening">Latest Products</h1>
           <ProductCarousel className = "shop-carousel"/>

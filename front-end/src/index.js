@@ -29,7 +29,7 @@ import ProductListScreen from './screens/admin/ProductListScreen';
 import ProductEditScreen from './screens/admin/ProductEditScreen';
 import UserListScreen from './screens/admin/UserListScreen';
 import UserEditScreen from './screens/admin/UserEditScreen';
-import IntroScreen from './screens/IntroScreen';
+
 import AboutScreen from './screens/AboutScreen';
 import ContactScreen from './screens/ContactScreen'; // Import EmailScreen
 import ResetPasswordScreen from './screens/ResetPasswordScreen';
@@ -43,8 +43,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
 
-      <Route path='/' element={<IntroScreen />} />
-      <Route index={true} path='/' element={<IntroScreen />} />
+      <Route path='/' element={<HomeScreen />} />
+      <Route index={true} path='/' element={<HomeScreen />} />
       
       <Route path='/shop' element={<HomeScreen />} />
       <Route path='/search/:keyword' element={<HomeScreen />} />
