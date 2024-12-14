@@ -33,6 +33,7 @@ app.use(
     credentials: true, // Include if you're using cookies or authorization headers
   })
 ); 
+
 //app.use(cors()); // Enable CORS in development - uses local host
 
 app.use(express.json());

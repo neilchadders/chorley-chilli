@@ -7,6 +7,7 @@ import { ReactTyped } from "react-typed";
 const IntroScreen = () => {
     return (
 
+        
         <div className = "main-container">
             
             <div id = "title-text">
@@ -14,7 +15,7 @@ const IntroScreen = () => {
                 <p className='intro-text'>Chorley Chilli Sauces</p>      
             </div>
             
-           
+        
         <div className="typed-div">
         <ReactTyped
                 strings={["Tasty Spices at Tasty Prices"] }          
@@ -24,9 +25,8 @@ const IntroScreen = () => {
                 className='intro-text typed'  />
            
         </div>
-        </div>
        
-           
+        </div>
     );
 }
 
