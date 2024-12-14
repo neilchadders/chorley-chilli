@@ -1,5 +1,5 @@
 .main-container{
-  background-color: yellow;
+  background-color: black;
   min-width: 80%;
   margin: auto;
   margin-top: 5%;
@@ -27,7 +27,7 @@
   justify-content: center;
   align-items: center;
   font-size: 120%;
-  color: black;
+  color: white;
   width: 100%;
   padding-left: 4%;
   padding-right: 4%;
