@@ -7,7 +7,7 @@ import { ReactTyped } from "react-typed";
 const IntroScreen = () => {
     return (
 
-        <div className = "screen-background main-container">
+        <div className = "main-container">
             
             <div id = "title-text">
                 <p className='title-head'>J. F. Bell</p> 
