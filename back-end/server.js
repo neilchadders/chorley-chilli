@@ -25,7 +25,7 @@ const app = express(); // Initialize app
 
 
 //Used for production/deployment
-{
+
 const allowedOrigins = ["https://chorley-chilli.onrender.com"];
 app.use(
   cors({
