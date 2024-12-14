@@ -15,7 +15,7 @@ const IntroScreen = () => {
             </div>
             
            
-     
+        <div className="typed-div">
         <ReactTyped
                 strings={["Tasty Spices at Tasty Prices"] }          
                 typeSpeed={100}
@@ -23,6 +23,7 @@ const IntroScreen = () => {
                 loop
                 className='intro-text typed'  />
            
+        </div>
         </div>
        
            
