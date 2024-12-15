@@ -1,0 +1,8 @@
+#shipping-screen {
+    margin-top: 8%;
+    color:black;
+    background:rgb(255,255,0, 0.5);
+    border: solid red 4px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 8%;
+    }

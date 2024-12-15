@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import FormContainer from '../components/FormContainer';
 import CheckoutSteps from '../components/CheckoutSteps';
 import { saveShippingAddress } from '../slices/cartSlice';
-import './screen.background.css';
+
+import './shippingScreen.css';
 
 
 const ShippingScreen = () => {
@@ -29,7 +29,7 @@ const ShippingScreen = () => {
   };
 
   return (
-    <FormContainer>
+      <div id = "shipping-screen">
       <CheckoutSteps step1 step2 />
       <h1>Shipping</h1>
       <Form onSubmit={submitHandler}>
@@ -81,7 +81,7 @@ const ShippingScreen = () => {
           Continue
         </Button>
       </Form>
-    </FormContainer>
+      </div>
   );
 };
 

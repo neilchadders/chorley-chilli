@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import Loader from '../components/Loader';
-import FormContainer from '../components/FormContainer';
+import './login.css';
 
 
 import { useLoginMutation } from '../slices/usersApiSlice';
@@ -49,7 +49,7 @@ const LoginScreen = () => {
 
   return (
    
-    <FormContainer>
+    <div id='login-div'>
       <h1>Sign In</h1>
 
       <Form onSubmit={submitHandler}>
@@ -97,7 +97,7 @@ const LoginScreen = () => {
           
         </Col>
   </Row>
-    </FormContainer>
+    </div>
   );
 };
 

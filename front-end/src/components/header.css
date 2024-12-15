@@ -2,7 +2,8 @@
 .header {
     font-family: 'Courier New', Courier, monospace;
    color: yellow;
-   background-color: #1d8238;
+   background: rgb(0,0,0);
+   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(7,30,13,1) 20%, rgba(29,130,56,1) 100%);
    padding-bottom: 20px;
   
 }
@@ -11,9 +12,6 @@
     
     font-family: 'Bungee Tint', sans-serif;
     font-size: 1.5em;
-    background-color: yellow;
-    padding: 1.5%;
-    border: red solid 4px; 
 }
 
 .navbar-toggler{
@@ -37,11 +35,13 @@
     scale: 1.2;
 }
 
-.main-link:focus{
+.main-link:focus, .main-link:active {
     color: red;
-    scale: 1.3;
-    text-decoration: underline ;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    text-decoration: underline;
 }
+
 
 
 
@@ -54,4 +54,5 @@
     .nav-link{
         font-size: .8em;
     }
+
 }

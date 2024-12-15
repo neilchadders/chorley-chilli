@@ -1,31 +1,20 @@
 #about-main{
     color: black;
-  
     margin-top: 8%;
-    
     font-family: 'Courier New', Courier, monospace;
-   border: red solid 4px;
+    border: red solid 4px;
     background: rgb(255, 255, 0, .7);
-  
   }
 
   #intro-about{
     font-family: "Bungee Tint", sans-serif;
-    word-spacing: 1rem;
+   padding: 3%;
     text-align: center;
-    background-color: #1d8238;
-    padding: 5%;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(7,30,13,1) 20%, rgba(29,130,56,1) 100%);
+    font-size: 1.5em;
   }
   
-
-
-#about-main h1{
-    font-size: 50px;
-    font-weight: 900;
-    text-align: center;
-
-}
-
 
 
 .about-content-div{
@@ -49,6 +38,9 @@
                 
         font-family: 'Courier New', Courier, monospace;
    }
+   #intro-about{
+    font-size: 1em;
+   }
 
       .about-content-div{
         display: flex;
@@ -61,7 +53,7 @@
    
     .about-content-text{
         max-height: 100%;
-        font-size: 80%;
+        font-size:0.7em;
         font-weight: 900;
        max-width: 100%;
     }
