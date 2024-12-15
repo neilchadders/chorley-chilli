@@ -6,3 +6,8 @@
     font-family: 'Courier New', Courier, monospace;
     padding: 8%;
     }
+
+    #register-header{
+        background: rgba(29,130,56,1);
+        font-family: 'Bungee Tint', sans-serif;
+    }
