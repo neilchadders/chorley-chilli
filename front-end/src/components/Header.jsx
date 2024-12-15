@@ -44,7 +44,7 @@ const Header = () => {
             <Nav className="ms-auto">
               <SearchBox />
               <LinkContainer to="/cart">
-                <Nav.Link>
+                <Nav.Link className = "log-cart">
                   <FaShoppingCart /> Cart
                   {cartItems.length > 0 && (
                     <Badge pill bg="success" style={{ marginLeft: '5px' }}>
@@ -66,7 +66,7 @@ const Header = () => {
                 </>
               ) : (
                 <LinkContainer to="/login">
-                  <Nav.Link>
+                  <Nav.Link className = "log-cart">
                     <FaUser /> Sign In
                   </Nav.Link>
                 </LinkContainer>
@@ -93,13 +93,13 @@ const Header = () => {
       <div className="bottom-nav">
         <Container className="d-flex justify-content-evenly">
           <LinkContainer to="/shop">
-            <Nav.Link>Shop</Nav.Link>
+            <Nav.Link className = "main-link">Shop</Nav.Link>
           </LinkContainer>
           <LinkContainer to="/about">
-            <Nav.Link>About</Nav.Link>
+            <Nav.Link className = "main-link">About</Nav.Link>
           </LinkContainer>
           <LinkContainer to="/contact">
-            <Nav.Link>Contact</Nav.Link>
+            <Nav.Link className = "main-link">Contact</Nav.Link>
           </LinkContainer>
         </Container>
       </div>

@@ -1,7 +1,7 @@
 #about-main{
     color: black;
-    background-color: yellow;
-    margin-top: 80px;
+  
+    margin-top: 8%;
     
     font-family: 'Courier New', Courier, monospace;
    border: red solid 4px;
@@ -13,7 +13,8 @@
     font-family: "Bungee Tint", sans-serif;
     word-spacing: 1rem;
     text-align: center;
-    padding-top: 50px;
+    background-color: #1d8238;
+    padding: 5%;
   }
   
 
@@ -44,17 +45,10 @@
 }
 
 @media screen and (max-width: 920px){
-    #about-main{
-
-        
-        margin-top: 20px;
-        padding: 20px;
+    #about-main{       
+                
         font-family: 'Courier New', Courier, monospace;
-       
-       
-     
-            
-      }
+   }
 
       .about-content-div{
         display: flex;
@@ -62,16 +56,13 @@
         flex-wrap: wrap;
         margin-top: 0;
         margin-bottom: 0;
+        padding: 5%;
     }
-    #about-main h1{
-        font-size: 20px;
-        font-weight: 900;
-        text-align: center;
-    
-    }
+   
     .about-content-text{
         max-height: 100%;
-        font-size: 60%;
+        font-size: 80%;
+        font-weight: 900;
        max-width: 100%;
     }
     .about-content-image{

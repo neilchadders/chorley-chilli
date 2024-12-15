@@ -1,0 +1,23 @@
+#contact-header{
+    padding: 3%;
+    font-family: "Bungee Tint", sans-serif;
+    word-spacing: 1rem;
+    text-align: center;
+    background-color: #1d8238;
+    min-width: 100%;
+    
+}
+#contact-container{
+    border: solid 4px red;
+    margin-top: 8%;
+}
+.form-body{
+    font-family: 'Courier New', Courier, monospace;
+    border:none;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.submit{
+    margin-top: 5%;
+}
