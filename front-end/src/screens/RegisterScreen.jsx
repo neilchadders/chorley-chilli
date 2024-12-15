@@ -11,7 +11,8 @@ import { toast } from 'react-toastify';
 
 import axios from 'axios';
 
-import './screen.background.css';
+
+import './RegisterScreen.css';
 
 
 const RegisterScreen = () => {
@@ -71,7 +72,7 @@ const RegisterScreen = () => {
 
   return (
 
-    <FormContainer>
+    <div id = "register">
       <h1>Register</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group className='my-2' controlId='name'>
@@ -128,7 +129,7 @@ const RegisterScreen = () => {
           </Link>
         </Col>
       </Row>
-    </FormContainer>
+      </div>
    
   );
 };
