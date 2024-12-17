@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Form, Button, Row, Col } from "react-bootstrap";
+import { Form, Button} from "react-bootstrap";
 import { toast } from "react-toastify";
 import axios from "axios";
-import FormContainer from "../components/FormContainer";
+import './password.css';
 
 const ResetPassword = () => {
   const { token } = useParams();
@@ -35,8 +35,9 @@ const ResetPassword = () => {
   };
 
   return (
-    <FormContainer>
-      <h1>Reset Password</h1>
+    <div className="password-reset">
+      <h1 className = "password-header">Reset Password</h1>
+      <div className="body-form">
       <Form onSubmit={submitHandler}>
         <Form.Group className="my-2" controlId="password">
           <Form.Label>New Password</Form.Label>
@@ -64,7 +65,8 @@ const ResetPassword = () => {
           Reset Password
         </Button>
       </Form>
-    </FormContainer>
+    </div>
+    </div>
   );
 };
 

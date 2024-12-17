@@ -51,7 +51,7 @@ const LoginScreen = () => {
    
     <div id='login-div'>
       <h1 id = "login-header">Sign In</h1>
-
+      <div id = "body-form">
       <Form onSubmit={submitHandler}>
         <Form.Group className='my-2' controlId='email'>
           <Form.Label>Email Address</Form.Label>
@@ -97,6 +97,7 @@ const LoginScreen = () => {
           
         </Col>
   </Row>
+  </div>
     </div>
   );
 };

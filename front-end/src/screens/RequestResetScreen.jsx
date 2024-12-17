@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import { toast } from "react-toastify";
 import axios from "axios";
-import FormContainer from "../components/FormContainer";
+import './password.css';
+
 
 const RequestReset = () => {
   const [email, setEmail] = useState("");
@@ -23,8 +24,9 @@ const RequestReset = () => {
   };
 
   return (
-    <FormContainer>
-      <h1>Request Password Reset</h1>
+    <div className="password-reset">
+    <h1 className = "password-header">Request Password Reset</h1>
+    <div className="body-form">
       <Form onSubmit={submitHandler}>
         <Form.Group className="my-2" controlId="email">
           <Form.Label>Email Address</Form.Label>
@@ -49,7 +51,8 @@ const RequestReset = () => {
           </Col>
         </Row>
       )}
-    </FormContainer>
+    </div>
+    </div>
   );
 };
 

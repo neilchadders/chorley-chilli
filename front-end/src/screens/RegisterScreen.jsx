@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import Loader from '../components/Loader';
-import FormContainer from '../components/FormContainer';
+
 
 import { useRegisterMutation } from '../slices/usersApiSlice';
 import { setCredentials } from '../slices/authSlice';
@@ -74,6 +74,7 @@ const RegisterScreen = () => {
 
     <div id = "register">
       <h1 id ="register-header">Register</h1>
+      <div id = "body-form">
       <Form onSubmit={submitHandler}>
         <Form.Group className='my-2' controlId='name'>
           <Form.Label>Name</Form.Label>
@@ -130,7 +131,7 @@ const RegisterScreen = () => {
         </Col>
       </Row>
       </div>
-   
+    </div>
   );
 };
 
