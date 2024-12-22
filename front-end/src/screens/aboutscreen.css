@@ -3,7 +3,7 @@
     margin-top: 8%;
     font-family: 'Courier New', Courier, monospace;
     border: red solid 4px;
-    background: rgb(255, 255, 0, .7);
+    background: rgb(255, 255, 0, .8);
   }
 
   #intro-about{
@@ -15,7 +15,10 @@
     font-size: 1.5em;
   }
   
-
+  .about-content-image{
+    max-width: 70%;
+    padding-bottom: 4%;
+}
 
 .about-content-div{
     display: flex;
@@ -53,11 +56,12 @@
    
     .about-content-text{
         max-height: 100%;
-        font-size:0.7em;
+        font-size:0.6em;
         font-weight: 900;
        max-width: 100%;
     }
     .about-content-image{
         max-width: 70%;
+        padding-bottom: 4%;
     }
 }

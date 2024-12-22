@@ -26,6 +26,7 @@ const app = express(); // Initialize app
 
 //Used for production/deployment
 
+
 const allowedOrigins = ["https://chorley-chilli.onrender.com"];
 app.use(
   cors({
@@ -33,6 +34,7 @@ app.use(
     credentials: true, // Include if you're using cookies or authorization headers
   })
 ); 
+
 
 //app.use(cors()); // Enable CORS in development - uses local host
 
