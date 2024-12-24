@@ -11,7 +11,7 @@ const AboutScreen = () => {
       <h1 id="intro-about">Welcome to J.F Bell's Hot Sauces</h1>
       <div className="about-content-div">
         <p className="about-content-text">
-          Hey It's me, JCB! I'm Jason, a proud native of Chorley in Lancashire, and the only thing I love more than my long term partner David are hot, hot sauces!
+          Hey It's me, JCB! I'm Jason, a proud native of Chorley in Lancashire, and the only thing I love hot, hot sauces!
         </p>
        
 
